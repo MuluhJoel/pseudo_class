@@ -1,0 +1,45 @@
+/* Here we declare the container relative so that our pseudo-class will have it as an immediate parent reference */
+/*The text-align is to send the button to the center, we can also display it flex and justify center*/
+/*This margin is just done so as to bring it to view*/
+
+.container {
+  text-align: center;
+  position: relative;
+  margin: 10rem 1rem 0;
+}
+
+button {
+  background-color: rgb(235, 30, 30);
+  color: white;
+  padding: 10px 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  height: 2px;
+  background-color: rgb(0, 0, 0, 0.2);
+  top: 50%;
+  z-index: -1;
+}
+
+/*The content should always be set to an empty string as above if you don't want any other content after it. It's always rarely used lol. In this case, it will still work if you use before, after or even both.*/
+
+/*We declare it absolute so we can control it with respect to the parent relative element which in this case is our container div*/
+
+/*The positioning from left to right is just to make it span 100%. You can do this in several other ways*/
+
+/*Since there's no content inside the container div, it automatically has a height of 0. So we give it a thin height and a background color to make it visible.*/
+
+/*We then position it 50% from the top so as to centralize it as we want*/
+
+/*A z-index of -1 will send it behind everything else. You should be careful when you give such elements a z-index because it will always be in relation to any other absolute element on the page. This means if you've given another element a z-index of -2, then this one would not go behind that particular element but go behind the others. Note that every element on a page has a z-index of 1 by default*/
+
+/*Many developers always think pseudo classes are an indepent element on their own. It's not really correct, you can inspect the page with the dev tools and see. The pseudo element whether before or after is still part of the element in which it was declared*/
+
+/*By Joel Muluh*/
