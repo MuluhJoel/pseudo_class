@@ -1,4 +1,4 @@
-/* Here we declare the container relative so that our pseudo-class will have it as an immediate parent reference */
+/* Here we declare the container relative so that our pseudo-element will have it as an immediate parent reference */
 /*The text-align is to send the button to the center, we can also display it flex and justify center*/
 /*This margin is just done so as to bring it to view*/
 
@@ -40,6 +40,6 @@ button {
 
 /*A z-index of -1 will send it behind everything else. You should be careful when you give such elements a z-index because it will always be in relation to any other absolute element on the page. This means if you've given another element a z-index of -2, then this one would not go behind that particular element but go behind the others. Note that every element on a page has a z-index of 1 by default*/
 
-/*Many developers always think pseudo classes are an indepent element on their own. It's not really correct, you can inspect the page with the dev tools and see. The pseudo element whether before or after is still part of the element in which it was declared*/
+/*Many developers always think the before and after pseudo-elements are an indepent element on their own. It's not really correct, you can inspect the page with the dev tools and see. The pseudo-lement whether before or after is still part of the element in which it was declared*/
 
 /*By Joel Muluh*/
